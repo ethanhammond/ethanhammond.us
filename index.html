@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+      <!-- Meta tags for SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ethan Hammond">
+    <meta name="description" content="This a personal website for Ethan Hammond, a Mechanical Engineering Technology student at MTU. It's a mobile-first single page app, and contains personal information, some past projects, and a contact form.">
+    <meta name=”robots” content=”index, follow”>
+    <meta property="og:image" content="">
+    <meta property="og:description" content="This a personal website for Ethan Hammond, a Mechanical Engineering Technology student at MTU. It's a mobile-first single page app, and contains personal information, some past projects, and a contact form.">
+    <meta property="og:title" content="Ethan Hammond">
     <title>Ethan Hammond</title>
+    <link rel="stylesheet" href="assets/css/flickity.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
-  <body>
-    <div class="sidebar">
-        
-    </div>
+  <body onload="initFlickity()">
+    <div class="carousel" data-flickity='{ "wrapAround": true}'>
+        <!-- These could be loaded dynamically by creating a featured ID, for featuredProjects in projectList -->
+        <div class="carousel-cell">
+            <p>project 1</p>
+        </div>
+        <div class="carousel-cell">
+            <p>project 2</p>
+        </div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
+      </div>
     <div class="mainContent">
-        <div class="homePage"></div>
+        <div class="homePage">
+            <div class="scroller"></div>
+            <div class="bio"></div>
+            <div class="resumeSection"></div>
+        </div>
         <div class="aboutPage"></div>
         <div class="projectsPage"></div>
         <div class="toolsPage"></div>
         <div class="contactPage"></div>
     </div>
     <div class="footer">
-        
+        <p></p>
     </div>
   </body>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/flickity.pkgd.min.js"></script>
 </html>
