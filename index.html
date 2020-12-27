@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <!-- Meta tags for SEO -->
+    <!-- Meta tags for SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Ethan Hammond">
@@ -10,37 +10,52 @@
     <meta property="og:image" content="">
     <meta property="og:description" content="This a personal website for Ethan Hammond, a Mechanical Engineering Technology student at MTU. It's a mobile-first single page app, and contains personal information, some past projects, and a contact form.">
     <meta property="og:title" content="Ethan Hammond">
+    <!-- Page title -->
     <title>Ethan Hammond</title>
-    <link rel="stylesheet" href="assets/css/flickity.min.css">
+    <!-- Styles and favicon-->
+    <link rel="stylesheet" href="assets/css/flickity.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://kit.fontawesome.com/182fee8297.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/site.webmanifest">
   </head>
+  <!-- Onload causes page slider to activate-->
   <body onload="initFlickity()">
-    <div class="carousel" data-flickity='{ "wrapAround": true}'>
-        <!-- These could be loaded dynamically by creating a featured ID, for featuredProjects in projectList -->
-        <div class="carousel-cell">
-            <p>project 1</p>
-        </div>
-        <div class="carousel-cell">
-            <p>project 2</p>
-        </div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-      </div>
     <div class="mainContent">
         <div class="homePage">
-            <div class="scroller"></div>
-            <div class="bio"></div>
-            <div class="resumeSection"></div>
+          <div class="carousel" data-flickity='{ "wrapAround": true}'>
+            <!-- These could be loaded dynamically by creating a featured ID, for featuredProjects in projectList -->
+            <div class="carousel-cell">
+              <p class="carouselTitle">BAJA SAE Gearbox</p>
+            </div>
+            <div class="carousel-cell">
+              <p class="carouselTitle">Flow Section Machining</p>
+            </div>
+            <div class="carousel-cell">
+              <p class="carouselTitle">Flow Section Machining</p>
+            </div>
+          </div>
+          <div class="bio"></div>
+          <div class="resumeSection"></div>
         </div>
         <div class="aboutPage"></div>
         <div class="projectsPage"></div>
         <div class="toolsPage"></div>
         <div class="contactPage"></div>
     </div>
-    <div class="footer">
-        <p></p>
-    </div>
+    <footer class="footer">
+        <p id="footerText">
+          <span id="crNotice">© 2020</span>
+          <a href="www.ethanhammond.us" id="crName">Ethan Hammond</a>
+          <span id="crEnd">All rights reserved</span>
+        </p>
+        <div id="socIcons">
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-github-square"></i>
+        </div>
+    </footer>
   </body>
 
   <script src="assets/js/main.js"></script>
